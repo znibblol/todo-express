@@ -1,0 +1,30 @@
+{
+  "name": "todo-express",
+  "version": "1.0.0",
+  "description": "Simple todo-app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "test": "(mysql -u root -phejsan123 -Bse 'DROP DATABASE test_todo_express' && mysql -u root -phejsan123 -Bse 'CREATE DATABASE test_todo_express') && mocha --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "knex": "^0.21.5",
+    "mocha": "^8.1.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.1.0",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
