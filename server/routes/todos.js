@@ -4,11 +4,13 @@ const query = require('../db/models/queries');
 const queries = require('../db/models/queries');
 
 function isValidId(req, res, next) {
+    console.log(req.params.id);
     if(!isNaN(req.params.id)) return next();
     next(new Error('Invalid ID'));
 }
 
 function validTodo(todo) {
+    console.log(todo.body);
     const hasTask = typeof todo.body.task == 'string' && todo.body.task.trim() != '';
     const hasParticipants = typeof todo.body.participants == 'string' && todo.body.participants.trim() != '';
     const hasCompleted = !isNaN(todo.body.completed);
